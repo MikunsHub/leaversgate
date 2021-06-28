@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Quiz</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="static/styles.css" rel="stylesheet">
+    
+</head>
+
+
+<body>
+
+    <div class="quiz-container">
+        <div class="title"><h1>Personality Quiz</h1></div> 
+      <div class = "subtitle"> Please select an option that best applies to you
+      </div>
+        
+        <div id="question" class="question"></div>
+<form  action="{{url_for('personality_test')}}" method="POST"></form>
+        <label class="option">
+            <input type="radio" name="option" value="1" />
+            <span class="option1"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" value="2" />
+            <span class="option2"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" value="3" />
+            <span class="option3"></span>
+        </label>
+      
+
+  </span>
+</form>
+     
+  
+     <!-- Buttons -->
+        <div class="controls">
+            <button class="previous">Previous</button>
+                    
+            <button class="next">Next</button>
+        </div>
+    </div>
+
+    <div class="result">
+
+    </div>
+</body>
+<script src="static/script.js"></script>
+</html>

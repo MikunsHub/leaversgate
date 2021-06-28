@@ -1,0 +1,650 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/personalityquiz.css">
+    <title>Take a Personality Quiz</title>
+</head>
+<body>
+    <!-- Include the action of the form -->
+    <form method="post" action="{{url_for('personality_test')}}">
+        <!-- The page for question one includes the heading -->
+        <section class="question_page" id="question_one">
+
+            <!-- Quiz Heading -->
+            <section class="quiz_header">
+                <h1 class="quiz_heading">Personality Quiz</h1>
+                <h2 class="quiz_instruction">Please select an option that best applies to you</h2>
+            </section>
+
+            <!-- Question 1 -->
+            <div class="question_card">
+                <!-- Retrieve answer using "request.form.get("question_one")" -->
+                <!-- If "not_interested" is chosen, then request.form.get("question_one") == not_interested_one -->
+                <!-- and so on -->
+                <p>1. <span>&nbsp;</span> Solves Maths Problems</p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_one" 
+                    name = "question_one" 
+                    value = "1"
+                >
+                <label for="not_interested_one">Not Interested</label> <span>&emsp;</span>
+                
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_one" 
+                    name = "question_one" 
+                    value = "4"
+                >
+                <label for="slightly_interested_one">Slightly Interested</label> <span>&emsp;</span>  
+    
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_one" 
+                    name = "question_one" 
+                    value = "3"
+                >
+                <label for="interested_one">Interested</label> <span>&emsp;</span>  
+    
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_one" 
+                    name = "question_one" 
+                    value = "2"
+                >
+                <label for="very_interested_one">Very Interested</label> <span>&emsp;</span> 
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_two">Next</a>
+                </div>  
+            </div>
+        </section>
+        
+        <!-- Question 2 -->
+        <section class="question_page" id="question_two">
+            <div class="question_card">
+                <p>2. <span>&nbsp;</span> Start or run a business</p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_two" 
+                    name = "question_two" 
+                    value = "1"
+                >
+                <label for="not_interested_two">Not Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_two" 
+                    name = "question_two" 
+                    value = "4"
+                >
+                <label for="slightly_interested_two">Slightly Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_two" 
+                    name = "question_two" 
+                    value = "3"
+                >
+                <label for="interested_two">Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_two" 
+                    name = "question_two" 
+                    value = "2"
+                >
+                <label for="very_interested_two">Very Interested</label> <span>&emsp;</span>
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_one">Previous</a>
+                    <a class="navigation_button next_button" href="#question_three">Next</a>
+                </div>  
+            </div>
+        </section>
+
+        <!-- Question 3 -->
+        <section class="question_page" id="question_three">
+            <div class="question_card">
+                <p>3. <span>&nbsp;</span> Use computer software to design or art </p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_three" 
+                    name = "question_three" 
+                    value = "1"
+                >
+                <label for="not_interested_three">Not Interested</label> <span>&emsp;</span>  
+    
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_three" 
+                    name = "question_three" 
+                    value = "4"
+                >
+                <label for="slightly_interested_three">Slightly Interested</label> <span>&emsp;</span>  
+    
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_three" 
+                    name = "question_three" 
+                    value = "3"
+                >
+                <label for="interested_three">Interested</label> <span>&emsp;</span>  
+    
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_three" 
+                    name = "question_three" 
+                    value = "2"
+                >
+                <label for="very_interested_three">Very Interested</label> <span>&emsp;</span>  
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_two">Previous</a>
+                    <a class="navigation_button next_button" href="#question_four">Next</a>
+                </div>  
+            </div>
+        </section>
+
+        <!-- Question 4 -->
+        <section class="question_page" id="question_four">
+            <div class="question_card">
+                <p>4. <span>&nbsp;</span> Serve community or take care of people</p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_four" 
+                    name = "question_four" 
+                    value = "1"
+                >
+                <label for="not_interested_four">Not Interested</label> <span>&emsp;</span>  
+    
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_four" 
+                    name = "question_four" 
+                    value = "4"
+                >
+                <label for="slightly_interested_four">Slightly Interested</label> <span>&emsp;</span>  
+    
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_four" 
+                    name = "question_four" 
+                    value = "3"
+                >
+                <label for="interested_four">Interested</label> <span>&emsp;</span>  
+    
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_four" 
+                    name = "question_four" 
+                    value = "2"
+                >
+                <label for="very_interested_four">Very Interested</label> <span>&emsp;</span>  
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_three">Previous</a>
+                    <a class="navigation_button next_button" href="#question_five">Next</a>
+                </div>
+            </div>
+        </section>
+        <section class="question_page" id="question_five">
+            <div class="question_card">
+                <p>5. <span>&nbsp;</span> Bake cakes or cook</p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_five" 
+                    name = "question_five" 
+                    value = "1"
+                >
+                <label for="not_interested_five">Not Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_five" 
+                    name = "question_five" 
+                    value = "4"
+                >
+                <label for="slightly_interested_five">Slightly Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_five" 
+                    name = "question_five" 
+                    value = "3"
+                >
+                <label for="interested_five">Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_five" 
+                    name = "question_five" 
+                    value = "2"
+                >
+                <label for="very_interested_five">Very Interested</label> <span>&emsp;</span>  
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_four">Previous</a>
+                    <a class="navigation_button next_button" href="#question_six">Next</a>
+                </div>  
+            </div>
+        </section>
+        <section class="question_page" id="question_six">
+            <div class="question_card">
+                <p>6. <span>&nbsp;</span> Love music or art</p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_six" 
+                    name = "question_six" 
+                    value = "1"
+                >
+                <label for="not_interested_six">Not Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_six" 
+                    name = "question_six" 
+                    value = "4"
+                >
+                <label for="slightly_interested_six">Slightly Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_six" 
+                    name = "question_six" 
+                    value = "3"
+                >
+                <label for="interested_six">Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_six" 
+                    name = "question_six" 
+                    value = "2"
+                >
+                <label for="very_interested_six">Very Interested</label> <span>&emsp;</span>  
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_five">Previous</a>
+                    <a class="navigation_button next_button" href="#question_seven">Next</a>
+                </div>  
+            </div>
+        </section>
+        <section class="question_page" id="question_seven">
+            <div class="question_card">
+                <p>7. <span>&nbsp;</span> Write or tell stories</p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_seven" 
+                    name = "question_seven" 
+                    value = "1"
+                >
+                <label for="not_interested_seven">Not Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_seven" 
+                    name = "question_seven" 
+                    value = "4"
+                >
+                <label for="slightly_interested_seven">Slightly Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_seven" 
+                    name = "question_seven" 
+                    value = "3"
+                >
+                <label for="interested_seven">Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_seven" 
+                    name = "question_seven" 
+                    value = "2"
+                >
+                <label for="very_interested_seven">Very Interested</label> <span>&emsp;</span>  
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_six">Previous</a>
+                    <a class="navigation_button next_button" href="#question_eight">Next</a>
+                </div>  
+            </div>
+        </section>
+        <section class="question_page" id="question_eight">
+            <div class="question_card">
+                <p>8. <span>&nbsp;</span> Teach people</p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_eight" 
+                    name = "question_eight" 
+                    value = "1"
+                >
+                <label for="not_interested_eight">Not Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_eight" 
+                    name = "question_eight" 
+                    value = "4"
+                >
+                <label for="slightly_interested_eight">Slightly Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_eight" 
+                    name = "question_eight" 
+                    value = "3"
+                >
+                <label for="interested_eight">Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_eight" 
+                    name = "question_eight" 
+                    value = "2"
+                >
+                <label for="very_interested_eight">Very Interested</label> <span>&emsp;</span>  
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_seven">Previous</a>
+                    <a class="navigation_button next_button" href="#question_nine">Next</a>
+                </div>  
+            </div>
+        </section>
+        <section class="question_page" id="question_nine">
+            <div class="question_card">
+                <p>9. <span>&nbsp;</span> Fix/build or assemble things</p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_nine" 
+                    name = "question_nine" 
+                    value = "1"
+                >
+                <label for="not_interested_nine">Not Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_nine" 
+                    name = "question_nine" 
+                    value = "4"
+                >
+                <label for="slightly_interested_nine">Slightly Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_nine" 
+                    name = "question_nine" 
+                    value = "3"
+                >
+                <label for="interested_nine">Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_nine" 
+                    name = "question_nine" 
+                    value = "2"
+                >
+                <label for="very_interested_nine">Very Interested</label> <span>&emsp;</span>  
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_eight">Previous</a>
+                    <a class="navigation_button next_button" href="#question_ten">Next</a>
+                </div>  
+            </div>
+        </section>
+        <section class="question_page" id="question_ten">
+            <div class="question_card">
+                <p>10. <span>&nbsp;</span> Lead or take up responsibility</p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_ten" 
+                    name = "question_ten" 
+                    value = "1"
+                >
+                <label for="not_interested_ten">Not Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_ten" 
+                    name = "question_ten" 
+                    value = "4"
+                >
+                <label for="slightly_interested">Slightly Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_ten" 
+                    name = "question_ten" 
+                    value = "3"
+                >
+                <label for="interested_ten">Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_ten" 
+                    name = "question_ten" 
+                    value = "2"
+                >
+                <label for="very_interested_ten">Very Interested</label> <span>&emsp;</span>  
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_nine">Previous</a>
+                    <a class="navigation_button next_button" href="#question_eleven">Next</a>
+                </div>  
+            </div>
+        </section>
+        <section class="question_page" id="question_eleven">
+            <div class="question_card">
+                <p>11. <span>&nbsp;</span> Love going to school</p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_eleven" 
+                    name = "question_eleven" 
+                    value = "1"
+                >
+                <label for="not_interested_eleven">Not Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_eleven" 
+                    name = "question_eleven" 
+                    value = "4"
+                >
+                <label for="slightly_interested_eleven">Slightly Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_eleven" 
+                    name = "question_eleven" 
+                    value = "3"
+                >
+                <label for="interested_eleven">Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_eleven" 
+                    name = "question_eleven" 
+                    value = "2"
+                >
+                <label for="very_interested_eleven">Very Interested</label> <span>&emsp;</span>  
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_ten">Previous</a>
+                    <a class="navigation_button next_button" href="#question_twelve">Next</a>
+                </div>  
+            </div>
+        </section>
+        <section class="question_page" id="question_twelve">
+            <div class="question_card">
+                <p>12. <span>&nbsp;</span> Like teachers</p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_twelve" 
+                    name = "question_twelve" 
+                    value = "1"
+                >
+                <label for="not_interested_twelve">Not Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_twelve" 
+                    name = "question_twelve" 
+                    value = "4"
+                >
+                <label for="slightly_interested_twelve">Slightly Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_twelve" 
+                    name = "question_twelve" 
+                    value = "3"
+                >
+                <label for="interested_twelve">Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_twelve" 
+                    name = "question_twelve" 
+                    value = "2"
+                >
+                <label for="very_interested_twelve">Very Interested</label> <span>&emsp;</span>  
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_eleven">Previous</a>
+                    <a class="navigation_button next_button" href="#question_thirteen">Next</a>
+                </div>  
+            </div>
+        </section>
+        <section class="question_page" id="question_thirteen">
+            <div class="question_card">
+                <p>13. <span>&nbsp;</span> Love to save money</p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_thirteen" 
+                    name = "question_thirteen" 
+                    value = "1"
+                >
+                <label for="not_interested_thirteen">Not Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_thirteen" 
+                    name = "question_thirteen" 
+                    value = "4"
+                >
+                <label for="slightly_interested_thirteen">Slightly Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_thirteen" 
+                    name = "question_thirteen" 
+                    value = "3"
+                >
+                <label for="interested_thirteen">Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_thirteen" 
+                    name = "question_thirteen" 
+                    value = "2"
+                >
+                <label for="very_interested_thirteen">Very Interested</label> <span>&emsp;</span>  
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_twelve">Previous</a>
+                    <a class="navigation_button next_button" href="#question_fourteen">Next</a>
+                </div>  
+            </div>
+        </section>
+        <section class="question_page" id="question_fourteen">
+            <div class="question_card">
+                <p>14. <span>&nbsp;</span> Watch the news</p>
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "not_interested_fourteen" 
+                    name = "question_fourteen" 
+                    value = "1"
+                >
+                <label for="not_interested_fourteen">Not Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "slightly_interested_fourteen" 
+                    name = "question_fourteen" 
+                    value = "4"
+                >
+                <label for="slightly_interested_fourteen">Slightly Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "interested_fourteen" 
+                    name = "question_fourteen" 
+                    value = "3"
+                >
+                <label for="interested_fourteen_fourteen">Interested</label> <span>&emsp;</span>  
+
+                <input 
+                    class = "options"
+                    type = "radio" 
+                    id = "very_interested_fourteen" 
+                    name = "question_fourteen" 
+                    value = "2"
+                >
+                <label for="very_interested_fourteen">Very Interested</label> <span>&emsp;</span>  
+                <div class="navigation_buttons">
+                    <a class="navigation_button prev_button" href="#question_thirteen">Previous</a>
+                    <!-- Submit the form  -->
+                    <button type="submit" class="submit_button navigation_button next_button">Submit</button>
+                </div>  
+            </div>
+        </section>
+        <br>
+    </form>
+    Your Personality class falls under group {{Personality_group}}
+</body>
+</html>

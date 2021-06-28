@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/edit.css">
+    <title>Set up your profile</title>
+</head>
+<body>
+    <div class="container">
+        <p>Update your Profile by filling the forms below</p>
+        <div class="basic-informations">
+            <h1>Basic Informations</h1>
+            <form class="login-form" action="{{url_for('edit_profile')}}" method="POST">
+                <input class="user-input" type="email" name="email" placeholder="Email" required>
+                <input class="user-input" type="text" name="DoB" placeholder="Date of Birth" required>
+                <input class="user-input" type="text" name="Hmaddress" placeholder="Home Address" required>
+                <input class="user-input" type="text" name="Department" placeholder="Department" required>
+                <input class="user-input" type="text" name="Faculty" placeholder="Faculty" required>
+                <input class="user-input" type="text" name="level" placeholder="Level" required>
+                <a href="{{ url_for('profile') }}"><input class="btn" type="submit" name="" value="Submit"></a>
+            </form>
+        </div>
+
+
+
+        <!-- <button class="btn" type="submit" href="{{url_for('profile')}}">Submit</button> -->
+        <!-- <button><a href="{{url_for('profile')}}">Submit</a></button> -->
+    </div>
+    
+</body>
+</html>

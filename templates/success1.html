@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="static/stylez.css">
+</head>
+<body>
+    <div class="popup center">
+        <div class="icon">
+          <i class="fa fa-check"></i>
+        </div>
+        <div class="title">
+          Success!!
+        </div>
+        <div class="description">
+          You have successfully completed your personality test. You belong to the personality class {{Personality_group}}
+          <p>
+            Kindly check your mail to see the breakdown of your score
+          </p>
+        </div>
+        <div class="dismiss-btn">
+          <button href="{{url_for('profile')}}" id="dismiss-popup-btn">
+            Dismiss
+          </button>
+        </div>
+      </div>
+      <div class="center">
+        <button id="open-popup-btn">
+          Click to view your test results
+        </button>
+      </div>
+
+
+      <script src="static/app.js"></script>
+    
+</body>
+</html>

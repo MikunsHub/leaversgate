@@ -1,0 +1,110 @@
+/* Declare color values */
+:root {
+    --darkblue: rgb(9, 2, 43);
+    --green: rgb(14, 56, 14);
+}
+
+/* Set background color -> Background color set to a gradient */
+body {
+    background: linear-gradient(rgb(133, 196, 255) 0%, rgb(168, 168, 255) 100%);
+}
+
+/* Style headings (Not Styled Yet) */
+.quiz_header {
+    text-align: center;
+    padding: 48px 0px 0px 0px;
+}
+
+.quiz_heading {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+/* Make each question its own pseudopage */
+.question_page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Wrap each question in a card */
+.question_card {
+    border: 0px solid gray;
+    border-radius: 8px;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50vw;
+    height: 30vh;
+
+    text-align: center;
+    padding: 32px;
+
+    box-shadow: inset 0px 0px 8px rgba(0,0,0,0.5)
+}
+
+/* Styling all p (questions) in form */
+form p {
+    font-weight: bold;
+    font-size: 32px;
+    text-align: left;
+
+    padding-bottom: 16px;
+    margin-bottom: 48px;
+    border-bottom: 1px solid gray;
+}
+
+.navigation_buttons {
+    display: grid;
+    grid-template: auto;
+
+    position: absolute;
+    left: 50%;
+    bottom: 32;
+    transform: translate(-50%);
+
+    margin: auto;
+    font-size: larger;
+}
+
+.prev_button {
+    grid-area: 1/1;
+}
+.next_button {
+    grid-area: 1/15;
+}
+.navigation_button {
+    text-align: center;
+
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 8px 16px;
+    color: rgb(233, 233, 233);
+    margin: 0 16px;  
+    width: 80px;
+    background: var(--darkblue);
+}
+.navigation_button:hover{
+    filter: brightness(200%);
+}
+
+.submit_button {
+    background-color: var(--green);
+    color: white;
+    border: none;
+}
+
+
+input[type="radio"] {
+    transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5); 
+    
+    border: none;
+    cursor: pointer;
+}
+
+.options + label {
+    font-size: larger;
+}
