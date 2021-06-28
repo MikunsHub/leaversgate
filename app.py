@@ -9,7 +9,7 @@ def getData(data):
 
 app = Flask(__name__)
 
-ENV = "dev"
+ENV = "dep"
 if ENV == "dev":
     app.debug = True
 else:
