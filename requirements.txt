@@ -2,6 +2,7 @@
 click==7.1.2
 colorama==0.4.3
 Flask==1.1.2
+gunicorn 
 isort==4.3.21
 itsdangerous==1.1.0
 Jinja2==2.11.2
