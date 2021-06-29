@@ -2,7 +2,7 @@ from flask import Flask,render_template,request,url_for,redirect
 import pandas as pd
 import pickle
 
-clustering_model = pickle.load(open("leaversgate/Personality_class.sav", 'rb'))
+clustering_model = pickle.load(open("Personality_class.sav", 'rb'))
 def getData(data):
             data = data_df
             return data
