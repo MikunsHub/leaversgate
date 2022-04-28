@@ -1,4 +1,4 @@
-To see the implementation of this project visit "leaversgate.herokuapp.com"
+To see the implementation of this project visit "https://www.leaversgate.herokuapp.com"
 
 In this Project the aim was to create a platform for secondary school students to take a Personality test from a custom made Questionaire. With this 
 questionaire a Machine Learning model in the backend of the web app predicts their Affinity to be science,art or commercial students. I implemented a
